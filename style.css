@@ -1,0 +1,51 @@
+:root {
+
+    --main-color: #ecf0f1;
+    --element-color: #333;
+    --size: 5px;
+}
+
+
+
+.loader {
+
+    background-color: var(--main-color);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.element {
+    border-radius: 100%;
+    border: var(--size) solid var(--element-color);
+    margin: calc(var(--size)*2);
+}
+
+
+.e-f {
+    animation: loader .6s ease-in-out alternate infinite;
+    animation-delay: .3s;
+}
+
+.e-s {
+    animation: loader .6s ease-in-out alternate infinite;
+    animation-delay: .4s;
+}
+
+.e-th {
+    animation: loader .6s ease-in-out alternate infinite;
+    animation-delay: .5s;
+}
+
+
+@keyframes loader {
+    100% {
+        transform: scale(2);
+    }
+}
